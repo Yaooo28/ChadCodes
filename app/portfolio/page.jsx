@@ -28,9 +28,9 @@ const team = {
     achievements: "Led major projects and teams successfully"
   },
   {
-    name: "Lemuel Pineda",
-    role: "Quality Assurance (QA) Engineer",
-    imageUrl: "/assets/3.png",
+    name: "Danilo Robles",
+    role: "Front-end Developer",
+    imageUrl: "/assets/6.png",
     achievements: "Led major projects and teams successfully"
   },
   {
@@ -46,9 +46,9 @@ const team = {
     achievements: "Led major projects and teams successfully"
   },
   {
-    name: "Danilo Robles",
-    role: "Front-End Developer",
-    imageUrl: "/assets/6.png",
+    name: "Lemuel Pineda",
+    role: "Quality Assurance (QA) Engineer",
+    imageUrl: "/assets/3.png",
     achievements: "Led major projects and teams successfully" 
   }
 ]

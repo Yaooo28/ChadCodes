@@ -12,19 +12,19 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Whatsapp",
-    link: "https://wa.me/639392445101",  // Updated to use WhatsApp link
+    link: "https://wa.me/639392445101",
     description: "(+63) 939-244-5101" 
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chadcodeservices@gmail.com",  // Updated to use mailto: scheme
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=chadcodeservices@gmail.com",
     description: "chadcodeservices@gmail.com"  
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Located at: Philippines"  // Non-clickable text
+    description: "Located at: Philippines"
   },
 ];
 
