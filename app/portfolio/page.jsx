@@ -19,7 +19,7 @@ const team = {
     name: "Zander Garcia",
     role: "Project Manager",
     imageUrl: "/assets/1.png",
-    achievements: "Led major projects and teams successfully"
+    achievements: "bading daw tong taong to"
   },
   {
     name: "Kirby Ordaz",
