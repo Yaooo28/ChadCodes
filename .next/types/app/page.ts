@@ -1,4 +1,4 @@
-// File: D:\Coding Area\ReactJS\portfolio-chads\app\page.jsx
+// File: D:\Coding Area\ReactJS\portfolioExample\Example1\app\page.jsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
