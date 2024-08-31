@@ -5,6 +5,7 @@ import { SiMysql, SiMongodb } from "react-icons/si";
 import {SiTailwindcss, SiNextdotjs, SiAndroidstudio, SiCsharp, SiFirebase } from "react-icons/si";
 import React, { useState } from 'react';
 
+
 //about us
 const about = {
   title: 'About Us',
@@ -153,7 +154,7 @@ const Portfolio = () => {
                                         ${team.item.length % 2 !== 0 && index === team.item.length - 1 ? 'lg:col-start-1 lg:col-end-3' : ''}`}>
                           {!isFlipped ? (
                             <>
-                              <img src={item.imageUrl} alt={item.name} className="w-[160px] h-[160px] rounded-full" />
+                              <Image src={item.imageUrl} alt={item.name} className="w-[160px] h-[160px] rounded-full" />
                               <h3 className="text-xl text-white mt-4">{item.role}</h3>
                               <h4 className="text-lg text-stone-200">{item.name}</h4>
                             </>
