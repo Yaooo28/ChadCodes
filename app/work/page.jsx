@@ -15,23 +15,16 @@ import Image from 'next/image';
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects =[
+
   {
     num: "01",
-    category: "Front-end Development",
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, omnis est odit asperiores laborum consectetur, eveniet, optio doloremque deleniti totam adipisci quia? Sed perspiciatis, temporibus blanditiis consectetur nobis adipisci quasi.", 
-    image: '/assets/work/newb2.png',
-    github: "",
-  },
-  {
-    num: "02",
     category: "Diploma Verification Web App",
     title: "Project 2",
     description: "Built with React and Express.js, this application leverages blockchain technology to generate unique Token IDs for diploma verification. Institutions can issue verifiable credentials, and employers can easily authenticate the legitimacy of diplomas, ensuring trust and transparency in the credentialing process.", 
     image: '/assets/work/newb1.png',
     github: "https://github.com/jwsorima",
   },{
-    num: "03",
+    num: "02",
     category: "Sera Android Application Object Recognition and Auditory Feedback",
     title: "Project 3",
     description: "Sera: An AI-powered app for visually impaired users that aids in grocery shopping by identifying products via smartphone camera and providing auditory feedback. It also supports hands-free operation with speech-to-text features. While effective, it requires some improvements to further enhance user independence.", 

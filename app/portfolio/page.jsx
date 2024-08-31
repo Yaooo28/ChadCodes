@@ -23,31 +23,31 @@ const team = {
   },
   {
     name: "Kirby Ordaz",
-    role: "UX/UI Designer",
+    role: "Lead Product Designer",
     imageUrl: "/assets/2.png",
     achievements: "Led major projects and teams successfully"
   },
   {
     name: "Danilo Robles",
-    role: "Front-end Developer",
+    role: "UI/UX Designer",
     imageUrl: "/assets/6.png",
     achievements: "Led major projects and teams successfully"
   },
   {
     name: "Jerome Padayao",
-    role: "Front-End Developer",
+    role: "Full Stack Developer",
     imageUrl: "/assets/4.png",
     achievements: "Led major projects and teams successfully"
   },
   {
     name: "James William Sorima",
-    role: "Back-end Developer",
+    role: "Full Stack Developer",
     imageUrl: "/assets/5.png",
     achievements: "Led major projects and teams successfully"
   },
   {
     name: "Lemuel Pineda",
-    role: "Quality Assurance (QA) Engineer",
+    role: "Quality Assurance (QA)",
     imageUrl: "/assets/3.png",
     achievements: "Led major projects and teams successfully" 
   }
