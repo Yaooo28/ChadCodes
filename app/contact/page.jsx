@@ -48,7 +48,7 @@ const contact = () => {
           <div className="flex flex-col xl:flex-row gap-[30px]">
             <div className="xl:w-[54%] order-2 xl:order-none">
               <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-                <h3 className="text-4xl text-blue-400">Let's work Together</h3>
+                <h3 className="text-4xl text-blue-400">Let's work together</h3>
                 <p className="text-white/70">ChadCodes offers bespoke digital solutions in web and system development, mobile app creation, and UI/UX design. Our dedicated team excels in transforming client visions into engaging digital experiences with customized functionality and superior aesthetic design. From revamping existing systems to crafting new platforms, we focus on delivering high-quality, scalable solutions that propel businesses forward. Partner with ChadCodes to turn your digital aspirations into realities.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input type="firstname" placeholder="First Name"/>
