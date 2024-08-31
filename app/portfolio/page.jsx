@@ -1,10 +1,9 @@
 "use client";
 import Image from 'next/image'
-import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaLaravel, FaDatabase} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaLaravel, FaDatabase } from "react-icons/fa";
 import { SiMysql, SiMongodb } from "react-icons/si";
-import {SiTailwindcss, SiNextdotjs, SiAndroidstudio, SiCsharp, SiFirebase } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiAndroidstudio, SiCsharp, SiFirebase } from "react-icons/si";
 import React, { useState } from 'react';
-
 
 //about us
 const about = {
@@ -84,7 +83,7 @@ const skills = {
   },
   {
     icon: <FaNodeJs />,
-    name: "Node.jss",
+    name: "Node.js",
   },{
     icon: <FaFigma />,
     name: "Figma",
@@ -121,12 +120,24 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 
 const Portfolio = () => {
+  // State to manage the flip state for each team member card
+  const [flippedStates, setFlippedStates] = useState(
+    team.item.map(() => false) // Initialize with 'false' for each item
+  );
+
+  // Function to handle the flip state change
+  const handleFlip = (index) => {
+    const newFlippedStates = [...flippedStates];
+    newFlippedStates[index] = !newFlippedStates[index];
+    setFlippedStates(newFlippedStates);
+  };
+
   return (
     <motion.div 
-    initial={{ opacity: 0 }}
-    animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}, 
-    }}
-    className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+      initial={{ opacity: 0 }}
+      animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}, 
+      }}
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
 
       <div className="container mx-auto">
         <Tabs defaultValue="team" className="flex flex-col xl:flex-row gap-[60px]">
@@ -136,25 +147,27 @@ const Portfolio = () => {
             <TabsTrigger value="about">About Us</TabsTrigger>
           </TabsList>
             
-          {/* Content */}
           <div className="min-h-[70vh] w-full">
-              {/* Teams content */}
               <TabsContent value="team" className="w-full">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{team.title}</h3>
                   <p className="max-w-[905px] text-white/85 mx-auto xl:mx-0 text-[18px]">{team.description}</p>
                   <ScrollArea className="h-[640px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] p-[15px] pb-[50px]!important">
-                    {team.item.map((item, index) => {
-                      const [isFlipped, setIsFlipped] = useState(false);
-                      return (
+                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] p-[15px] pb-[50px]!important">
+                      {team.item.map((item, index) => (
                         <li key={index}
-                            onClick={() => setIsFlipped(!isFlipped)}
+                            onClick={() => handleFlip(index)}
                             className={`flex flex-col items-center text-center bg-[#232329] h-[320px] py-6 px-10 rounded-xl justify-between shadow-lg hover:bg-slate-400 transition-all duration-500 ease-in-out transform hover:scale-105
                                         ${team.item.length % 2 !== 0 && index === team.item.length - 1 ? 'lg:col-start-1 lg:col-end-3' : ''}`}>
-                          {!isFlipped ? (
+                          {!flippedStates[index] ? (
                             <>
-                              <Image src={item.imageUrl} alt={item.name} className="w-[160px] h-[160px] rounded-full" />
+                              <Image 
+                                src={item.imageUrl} 
+                                alt={item.name} 
+                                width={160} 
+                                height={160} 
+                                className="rounded-full" 
+                              />
                               <h3 className="text-xl text-white mt-4">{item.role}</h3>
                               <h4 className="text-lg text-stone-200">{item.name}</h4>
                             </>
@@ -165,10 +178,9 @@ const Portfolio = () => {
                             </div>
                           )}
                         </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
+                      ))}
+                    </ul>
+                  </ScrollArea>
                 </div>
               </TabsContent>
                         
